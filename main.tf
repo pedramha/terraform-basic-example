@@ -8,7 +8,7 @@ provider "random" {
 
 # create a sample webserver ec2 instance
 resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
+  name = "terraform-example-instance2"
 
   ingress {
     from_port   = 8080
@@ -17,7 +17,7 @@ resource "aws_security_group" "instance" {
     cidr_blocks = var.cidr_blocks
   }
 }
-resource "aws_instance" "example" {
+resource "aws_instance" "example2" {
   ami                    = "ami-785db401"
   instance_type          = "t2.micro"
   availability_zone      = "eu-west-1a"
